@@ -4,20 +4,25 @@ import NormalizeSize from "./NormalizeSize";
 const { width, height } = Dimensions.get("window");
 
 const metrics = {
-  marginHorizontal: NormalizeSize.normalize(10),
-  marginVertical: NormalizeSize.normalize(10),
-  buttonHeight: NormalizeSize.normalize(50),
-  logoHeight: NormalizeSize.normalize(150),
-  logoWidth: NormalizeSize.normalize(120),
-  logoContainerH: NormalizeSize.normalize(160),
-  logoContainerW: NormalizeSize.normalize(130),
-  inputBoxW: NormalizeSize.normalize(300),
-  loginButtonH: NormalizeSize.normalize(35),
-  loginButtonW: NormalizeSize.normalize(120),
-  dividerSocialMediaW: NormalizeSize.normalize(300),
-  facebookLogoWH: NormalizeSize.normalize(60),
-  googleLogoWH: NormalizeSize.normalize(60),
-  socailMediaImageWH: NormalizeSize.normalize(55)
+  marginHorizontal: NormalizeSize.normalizeWidth(10),
+  marginVertical: NormalizeSize.normalizeHeight(10),
+  containerPaddingTop: NormalizeSize.normalizeHeight(30),
+  buttonHeight: NormalizeSize.normalizeHeight(50),
+  logoHeight: NormalizeSize.normalizeHeight(150),
+  logoWidth: NormalizeSize.normalizeWidth(120),
+  logoContainerH: NormalizeSize.normalizeHeight(155),
+  logoContainerW: NormalizeSize.normalizeWidth(125),
+  logoContainerPadding: NormalizeSize.normalizeWidth(10),
+  inputBoxW: NormalizeSize.normalizeWidth(300),
+  inputBoxH: NormalizeSize.normalizeHeight(50),
+  loginButtonH: NormalizeSize.normalizeHeight(40),
+  loginButtonW: NormalizeSize.normalizeWidth(120),
+  signinImageW: NormalizeSize.normalizeWidth(90),
+  signinImageH: NormalizeSize.normalizeHeight(30),
+  dividerSocialMediaW: NormalizeSize.normalizeWidth(300),
+  facebookLogoWH: NormalizeSize.normalizeWidth(60),
+  googleLogoWH: NormalizeSize.normalizeWidth(60),
+  socailMediaImageWH: NormalizeSize.normalizeWidth(55)
 };
 
 export default metrics;

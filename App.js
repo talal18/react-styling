@@ -30,53 +30,57 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.logoContainer}>
-          <View />
           <Image
             source={require("./images/loginLogo.png")}
             style={styles.logo}
           />
-          <View />
-          <View />
-          <View style={styles.formContainer}>
-            <TextInput
-              placeholder="Email"
-              textContentType="emailAddress"
-              style={styles.input}
+        </View>
+
+        <View style={styles.formContainer}>
+          <TextInput
+            placeholder="Email"
+            textContentType="emailAddress"
+            style={styles.input}
+          />
+          <TextInput
+            placeholder="password"
+            textContentType="password"
+            style={styles.input}
+          />
+        </View>
+
+        <View>
+          <TouchableOpacity
+            title="Log in"
+            onPress={this.login.bind(this)}
+            style={styles.loginButton}
+          >
+            <Image
+              source={require("./images/signin.png")}
+              style={styles.signinImage}
             />
-            <TextInput
-              placeholder="password"
-              textContentType="password"
-              style={styles.input}
+          </TouchableOpacity>
+        </View>
+
+        <View style={styles.divider}>
+          <Divider borderColor="#fff" color="#fff" orientation="center">
+            OR
+          </Divider>
+        </View>
+
+        <View style={styles.socialMedia}>
+          <TouchableOpacity style={styles.facebookButton}>
+            <Image
+              source={require("./images/facebook-logo2.png")}
+              style={styles.soacilMediaImage}
             />
-          </View>
-          <View>
-            <TouchableOpacity
-              title="Log in"
-              onPress={this.login.bind(this)}
-              style={styles.loginButton}
-            >
-              <Text style={styles.loginButtonText}>Sign in</Text>
-            </TouchableOpacity>
-          </View>
-          <View style={styles.divider}>
-            <Divider borderColor="#fff" color="#fff" orientation="center">
-              OR
-            </Divider>
-          </View>
-          <View style={styles.socialMedia}>
-            <TouchableOpacity style={styles.facebookButton}>
-              <Image
-                source={require("./images/facebook-logo2.png")}
-                style={styles.soacilMediaImage}
-              />
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.googleButton}>
-              <Image
-                source={require("./images/google-logo2.png")}
-                style={styles.soacilMediaImage}
-              />
-            </TouchableOpacity>
-          </View>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.googleButton}>
+            <Image
+              source={require("./images/google-logo2.png")}
+              style={styles.soacilMediaImage}
+            />
+          </TouchableOpacity>
         </View>
       </View>
     );
@@ -90,18 +94,19 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
     alignItems: "center",
     backgroundColor: "#424242",
-    padding: 10
+    padding: Metrics.containerPaddingTop
   },
   logoContainer: {
     width: Metrics.logoContainerW,
     height: Metrics.logoContainerH,
     alignItems: "center",
-    padding: 10
+    justifyContent: "center"
   },
 
   logo: {
     height: Metrics.logoHeight,
-    width: Metrics.logoWidth
+    width: Metrics.logoWidth,
+    resizeMode: "contain"
   },
 
   formContainer: {
@@ -110,10 +115,12 @@ const styles = StyleSheet.create({
   },
   input: {
     width: Metrics.inputBoxW,
+    height: Metrics.inputBoxH,
     backgroundColor: "#fff",
     borderColor: "grey",
     borderRadius: 5,
-    fontSize: 16,
+    fontSize: 20,
+    fontWeight: "bold",
     marginTop: 10,
     marginBottom: 10,
     shadowColor: "#303838",
@@ -137,10 +144,10 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.35
   },
 
-  loginButtonText: {
-    fontSize: 22,
-    color: "#fff",
-    fontWeight: "bold"
+  signinImage: {
+    width: Metrics.signinImageW,
+    height: Metrics.signinImageH,
+    resizeMode: "contain"
   },
 
   divider: {
