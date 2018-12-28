@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     justifyContent: "flex-start",
     alignItems: "center",
-    backgroundColor: "#424242",
+    backgroundColor: "#262626",
     padding: Metrics.loginContainerPaddingTop
   },
   logoContainer: {

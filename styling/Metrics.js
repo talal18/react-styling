@@ -54,7 +54,13 @@ const metrics = {
   formTypeDropMenuW: NormalizeSize.normalizeWidth(350),
   formTypeDropMenuH: NormalizeSize.normalizeHeight(30),
   formTypeDropMenuArrowW: NormalizeSize.normalizeWidth(15),
-  formTypeDropMenuArrowH: NormalizeSize.normalizeHeight(15)
+  formTypeDropMenuArrowH: NormalizeSize.normalizeHeight(15),
+
+  //Add times list
+  formAddTimeListContainerHeight: NormalizeSize.normalizeHeight(60),
+  formAddTimeListContainerWidth: NormalizeSize.normalizeWidth(350),
+  formAddTimeListHeight: NormalizeSize.normalizeHeight(60),
+  formAddTimeListWidth: NormalizeSize.normalizeWidth(320)
 };
 
 export default metrics;
